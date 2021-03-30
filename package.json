@@ -1,0 +1,35 @@
+{
+  "name": "amazonas",
+  "version": "1.0.0",
+  "description": "An OpenSea fully-customizable integration that allows the creation of smart contracts.",
+  "main": "index.js",
+  "scripts": {
+    "ganache-cli": "ganache-cli -d -p 7545 --gasLimit=10000000",
+    "test": "DEPLOY_ALL=1 truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gugarosa/amazonas"
+  },
+  "author": "gustavo.rosa@unesp.br",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gugarosa/amazonas/issues"
+  },
+  "homepage": "https://github.com/gugarosa/amazonas#readme",
+  "dependencies": {
+    "@0x/subproviders": "^2.1.4",
+    "eth-gas-reporter": "^0.2.17",
+    "multi-token-standard": "^0.8.13",
+    "opensea-js": "^1.1.5",
+    "openzeppelin-solidity": "^2.1.3",
+    "truffle": "^5.1.30",
+    "truffle-assertions": "^0.9.2",
+    "truffle-flattener": "^1.4.2",
+    "truffle-hdwallet-provider": "1.0.5",
+    "web3": "^1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
