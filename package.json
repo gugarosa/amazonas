@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "deploy": "DEPLOY_EXAMPLE=1 truffle deploy --network rinkeby",
-        "ganache-cli": "ganache-cli -d -p 7545 --gasLimit=10000000",
-        "test": "DEPLOY_EXAMPLE=1 truffle test"
+        "mint": "node scripts/mint.js",
+        "sell": "node scripts/sell.js"
     },
     "repository": {
         "type": "git",
