@@ -1,6 +1,11 @@
+# Builded files
+build
+flattened
+
+# Yarn/NPM-based
+node_modules
+yarn.lock
+
 # Unwanted files
-build/
-flattened/
-node_modules/
 .env
 *.DS_Store
