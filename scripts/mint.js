@@ -7,7 +7,7 @@ const FACTORY_CONTRACT_ADDRESS = process.env.FACTORY_CONTRACT_ADDRESS;
 const NFT_CONTRACT_ADDRESS = process.env.NFT_CONTRACT_ADDRESS;
 const OWNER_ADDRESS = process.env.OWNER_ADDRESS;
 const NETWORK = process.env.NETWORK;
-const NUM_CREATURES = 2;
+const NUM_CREATURES = 1;
 const NUM_LOOTBOXES = 4;
 const DEFAULT_OPTION_ID = 0;
 const LOOTBOX_OPTION_ID = 2;
@@ -22,10 +22,27 @@ if (!MNEMONIC || !NODE_API_KEY || !OWNER_ADDRESS || !NETWORK) {
 const NFT_ABI = [{
     constant: false,
     inputs: [{
-        name: "_to",
-        type: "address",
-    }, ],
-    name: "mintTo",
+            name: "_initialOwner",
+            type: "address",
+        },
+        {
+            name: "_id",
+            type: "uint256"
+        },
+        {
+            name: "_initialSupply",
+            type: "uint256"
+        },
+        {
+            name: "_uri",
+            type: "string"
+        },
+        {
+            name: "_data",
+            type: "bytes"
+        }
+    ],
+    name: "create",
     outputs: [],
     payable: false,
     stateMutability: "nonpayable",
@@ -99,7 +116,7 @@ async function main() {
         // Creatures issued directly to the owner.
         for (var i = 0; i < NUM_CREATURES; i++) {
             const result = await nftContract.methods
-                .mintTo(OWNER_ADDRESS)
+                .create(OWNER_ADDRESS, 1, 1, "", 0x00)
                 .send({
                     from: OWNER_ADDRESS
                 });
