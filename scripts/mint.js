@@ -116,7 +116,7 @@ async function main() {
         // Creatures issued directly to the owner.
         for (var i = 0; i < NUM_CREATURES; i++) {
             const result = await nftContract.methods
-                .create(OWNER_ADDRESS, 1, 1, "", 0x00)
+                .create(OWNER_ADDRESS, 5697857485734789, 1, "", 0x00)
                 .send({
                     from: OWNER_ADDRESS
                 });
