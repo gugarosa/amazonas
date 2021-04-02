@@ -1,0 +1,10 @@
+# Build files
+build
+flattened
+
+# NPM and Yarn files
+node_modules
+yarn.lock
+
+# Unwanted files
+**/*.DS_Store
