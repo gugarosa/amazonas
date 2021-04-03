@@ -1,4 +1,4 @@
-// Import contracts
+// Contracts
 const Example = artifacts.require("Example");
 
 // If you want to hardcode what deploys, comment out process.env.X and use
