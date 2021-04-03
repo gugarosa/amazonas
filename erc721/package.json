@@ -8,6 +8,7 @@
         "url": "git+https://github.com/gugarosa/amazonas"
     },
     "author": "gustavo.rosa@unesp.br",
+    "license": "GPL-3.0",
     "dependencies": {
         "@0x/subproviders": "^2.1.4",
         "eth-gas-reporter": "^0.2.17",
@@ -37,8 +38,5 @@
         ]
     },
     "scripts": {
-        "deploy": "DEPLOY_EXAMPLE=1 truffle deploy --network rinkeby",
-        "mint": "node scripts/mint.js",
-        "sell": "node scripts/sell.js"
     }
 }
